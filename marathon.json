@@ -8,7 +8,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "awsdevhmdal05:5000/lortone-hello:{{DOCKER_IMAGE_TAG}}",
+      "image": "dtr.cfpb.gov/lortone/hello:{{DOCKER_IMAGE_TAG}}",
       "network": "BRIDGE",
       "portMappings": [
         {
