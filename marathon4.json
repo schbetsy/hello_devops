@@ -1,0 +1,34 @@
+{
+  "id": "lortone-hello",
+  "mem": 128,
+  "cpus": 0.3,
+  "instances": 1,
+  "uris": [ ],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 0,
+          "servicePort": 10042,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "labels": {
+    "HAPROXY_GROUP": "internal"
+  },
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "portIndex": 0,
+      "path": "/",
+      "gracePeriod": 5,
+      "intervalSeconds": 20,
+      "maxConsecutiveFailures": 3
+    }
+  ]
+}
