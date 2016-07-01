@@ -1,10 +1,9 @@
 {
   "id": "lortone-hello",
-  "mem": 1024,
-  "cpus": 0.5,
-  "instances": 3,
-  "uris": [
-  ],
+  "mem": 128,
+  "cpus": 0.3,
+  "instances": 1,
+  "uris": [ ],
   "container": {
     "type": "DOCKER",
     "docker": {
@@ -12,9 +11,9 @@
       "network": "BRIDGE",
       "portMappings": [
         {
-          "containerPort": 8080, 
+          "containerPort": 80,
           "hostPort": 0,
-          "servicePort": 10003,
+          "servicePort": 10042,
           "protocol": "tcp"
         }
       ]
